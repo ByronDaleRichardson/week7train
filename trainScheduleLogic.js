@@ -60,7 +60,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   var tFrequency = trainFrequency;
 
   // First Time set back 1 year
-  var firstTime = moment().subtract(1, "years");
+  var firstTime = moment.unix(trainStart).subtract(1, "years");
 
   // Current time
   var currentTime = moment();
